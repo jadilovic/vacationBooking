@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box;
+}
+
+.font-ubuntu {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.font-nunito {
+	font-family: 'Nunito', sans-serif;
+	padding: 10px;
+	padding-top: 23px;
+}
+
+b {
+	font-weight: 700;
+}
+
+.header {
+	text-align: center;
+	/* border: 1px solid red; */
+	margin-top: 113px;
+	margin-bottom: 60px;
+	font-size: 26px;
+	line-height: 120%;
+	color: #000000;
+}
+
+.svgIcon {
+	position: relative;
+	height: 22px;
+	margin-right: 12px;
+}
+
+.backgroundScenic {
+	background-image: url('../images/accommodation-scenic.jpeg');
+}
+
+.backgroundScenicDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/accommodation-scenic.jpeg');
+}
+
+.backgroundQuaint {
+	background-image: url('../images/accommodation-quaint.jpeg');
+}
+
+.backgroundQuaintDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/accommodation-quaint.jpeg');
+}
+
+.backgroundCheap {
+	background-image: url('../images/accommodation-cheap.jpeg');
+}
+
+.backgroundCheapDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/accommodation-cheap.jpeg');
+}
+
+.card {
+	cursor: pointer;
+	border: 1px solid red;
+	height: 250px;
+	border-radius: 20px;
+	margin-top: 35px;
+	margin-left: 15px;
+	margin-right: 15px;
+	font-size: 16px;
+	line-height: 160%;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+	color: #1f2c41;
+}
+
+.check {
+	position: absolute;
+	margin-left: 38%;
+	margin-top: 13%;
+	width: 57px;
+	height: 57px;
+	background: #5181fc;
+	border-radius: 100px;
+}
+
+.infoButton {
+	height: 80px;
+	margin-top: 170px;
+	font-size: 16px;
+	background: #ffffff;
+	border-radius: 20px;
+	border: 1px solid red;
+}
+
+.footer a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer {
+	background: #5181fc;
+}
