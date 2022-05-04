@@ -26,11 +26,11 @@ const Welcome = () => {
 					</p>
 				</span>
 			</div>
-			<div className="footer">
-				<Link to="/accommodation">
+			<Link style={{ textDecoration: 'none' }} to="/accommodation">
+				<div className="footer">
 					<p className="font-link">Start Quiz</p>
-				</Link>
-			</div>
+				</div>
+			</Link>
 		</>
 	);
 };

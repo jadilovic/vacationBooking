@@ -73,7 +73,7 @@ b {
 	color: #1f2c41;
 }
 
-.check {
+.circle {
 	position: absolute;
 	margin-left: 38%;
 	margin-top: 13%;
@@ -81,6 +81,16 @@ b {
 	height: 57px;
 	background: #5181fc;
 	border-radius: 100px;
+}
+
+.check {
+	position: absolute;
+	left: 20.83%;
+	right: 20.83%;
+	top: 20.17%;
+	bottom: 29.17%;
+	/* border: 2px solid #ffffff; */
+	color: #ffffff;
 }
 
 .infoButton {
@@ -92,11 +102,15 @@ b {
 	border: 1px solid red;
 }
 
-.footer a {
-	color: #ffffff;
-	text-decoration: none;
+.footer-color {
+	background: #5181fc;
 }
 
-.footer {
-	background: #5181fc;
+.footer-color-dark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		#5181fc;
+}
+
+.disabled-link {
+	pointer-events: none;
 }
