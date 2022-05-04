@@ -12,8 +12,8 @@ b {
 
 .header {
 	text-align: center;
-	/* border: 1px solid red; */
-	margin-top: 113px;
+	border: 1px solid red;
+	padding-top: 113px;
 	font-size: 26px;
 	line-height: 120%;
 	color: #000000;

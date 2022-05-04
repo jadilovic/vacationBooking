@@ -2,31 +2,16 @@
 	box-sizing: border-box;
 }
 
-.font-ubuntu {
-	font-family: 'Ubuntu', sans-serif;
-}
-
 .font-nunito {
 	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	font-weight: bold;
 	padding: 10px;
 	padding-top: 23px;
 }
 
-b {
-	font-weight: 700;
-}
-
-.header {
-	text-align: center;
-	/* border: 1px solid red; */
-	margin-top: 113px;
-	margin-bottom: 60px;
-	font-size: 26px;
-	line-height: 120%;
-	color: #000000;
-}
-
 .svgIcon {
+	border: 1px solid red;
 	position: relative;
 	height: 22px;
 	margin-right: 12px;
@@ -79,7 +64,7 @@ b {
 	margin-top: 13%;
 	width: 57px;
 	height: 57px;
-	background: #5181fc;
+	/* background: #5181fc; */
 	border-radius: 100px;
 }
 
@@ -102,11 +87,11 @@ b {
 	border: 1px solid red;
 }
 
-.footer-color {
+.footer-accomm-color {
 	background: #5181fc;
 }
 
-.footer-color-dark {
+.footer-accomm-color-dark {
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		#5181fc;
 }

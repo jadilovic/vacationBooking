@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+}
+
+.svgTransport {
+	border: 1px solid red;
+	position: relative;
+	width: 60px;
+}
+
+.backgroundLuxury {
+	background-image: url('../images/transport-luxury.jpeg');
+}
+
+.backgroundLuxuryDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/transport-luxury.jpeg');
+}
+
+.backgroundPublic {
+	background-image: url('../images/transport-public.jpeg');
+}
+
+.backgroundPublicDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/transport-public.jpeg');
+}
+
+.backgroundTransportCheap {
+	background-image: url('../images/transport-cheap.jpeg');
+}
+
+.backgroundTransportCheapDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/transport-cheap.jpeg');
+}
+
+.footer-transport-color {
+	background: #d73780;
+}
+
+.footer-transport-color-dark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		#d73780;
+}

@@ -37,9 +37,14 @@ const Accommodation = () => {
 	};
 
 	return (
-		<>
+		<div
+			style={{
+				background: '#ecf0f9',
+				borderRadius: '20px',
+			}}
+		>
 			<div className="header">
-				<span className="font-ubuntu">
+				<span className="font-link">
 					<img className="svgIcon" alt="building" src={accomm} />
 					<b>Accommodation</b>
 				</span>
@@ -55,17 +60,29 @@ const Accommodation = () => {
 						}`}
 					>
 						{accomm.selected && (
-							<div className="circle">
+							<div style={{ background: '#5181fc' }} className="circle">
 								<div className="check">
 									<img alt="check" src={checkSvg} />
 								</div>
 							</div>
 						)}
 						<div id={index} className="infoButton">
-							<span style={{ float: 'left' }} className="font-nunito">
+							<span
+								style={{
+									float: 'left',
+									color: `${accomm.selected ? '#5181FC' : ''}`,
+								}}
+								className="font-nunito"
+							>
 								{accomm.name}
 							</span>
-							<span style={{ float: 'right' }} className="font-nunito">
+							<span
+								style={{
+									float: 'right',
+									color: `${accomm.selected ? '#5181FC' : ''}`,
+								}}
+								className="font-nunito"
+							>
 								{`$${accomm.cost}`}
 							</span>
 						</div>
@@ -78,17 +95,17 @@ const Accommodation = () => {
 				to="/transport"
 			>
 				<div
-					className={`footer footer-color${
-						selectedAccommodation ? '-dark' : ''
+					className={`footer footer-accomm-color${
+						selectedAccommodation ? '' : '-dark'
 					}`}
 				>
-					<p className="font-ubuntu">
+					<p className="font-link">
 						Select accommodation{' '}
 						<span style={{ float: 'right', paddingRight: 40 }}>1 / 3</span>
 					</p>
 				</div>
 			</Link>
-		</>
+		</div>
 	);
 };
 

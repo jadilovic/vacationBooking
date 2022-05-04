@@ -4,7 +4,12 @@ import '../styles/welcome.css';
 
 const Welcome = () => {
 	return (
-		<>
+		<div
+			style={{
+				background: '#FFFFFF',
+				borderRadius: '20px',
+			}}
+		>
 			<div className="header">
 				<span className="font-link">
 					Lorem<b>Ipsum</b>
@@ -31,7 +36,7 @@ const Welcome = () => {
 					<p className="font-link">Start Quiz</p>
 				</div>
 			</Link>
-		</>
+		</div>
 	);
 };
 
