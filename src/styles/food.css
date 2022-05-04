@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+.svgFood {
+	border: 1px solid red;
+	height: 26px;
+}
+
+.backgroundGourmet {
+	background-image: url('../images/food-gourmet.jpeg');
+}
+
+.backgroundGourmetDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/food-gourmet.jpeg');
+}
+
+.backgroundTraditional {
+	background-image: url('../images/food-traditional.jpeg');
+}
+
+.backgroundTraditionalDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/food-traditional.jpeg');
+}
+
+.backgroundFastFood {
+	background-image: url('../images/food-cheap.jpeg');
+}
+
+.backgroundFastFoodDark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+		url('../images/food-cheap.jpeg');
+}
+
+.footer-food-color {
+	background: #61ab04;
+}
+
+.footer-food-color-dark {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		#61ab04;
+}
