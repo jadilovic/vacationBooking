@@ -49,46 +49,48 @@ const Transport = () => {
 					Transport
 				</span>
 			</div>
-			{data.map((transport, index) => {
-				return (
-					<div
-						onClick={handleSelection}
-						id={index}
-						key={transport.name}
-						className={`card ${
-							transport.selected ? transport.photo + 'Dark' : transport.photo
-						}`}
-					>
-						{transport.selected && (
-							<div style={{ background: '#D73780' }} className="circle">
-								<div className="check">
-									<img alt="check" src={checkSvg} />
+			<div style={{ marginTop: 55 }}>
+				{data.map((transport, index) => {
+					return (
+						<div
+							onClick={handleSelection}
+							id={index}
+							key={transport.name}
+							className={`card ${
+								transport.selected ? transport.photo + 'Dark' : transport.photo
+							}`}
+						>
+							{transport.selected && (
+								<div style={{ background: '#D73780' }} className="circle">
+									<div className="check">
+										<img alt="check" src={checkSvg} />
+									</div>
 								</div>
+							)}
+							<div id={index} className="infoButton">
+								<span
+									style={{
+										float: 'left',
+										color: `${transport.selected ? '#D73780' : ''}`,
+									}}
+									className="font-nunito"
+								>
+									{transport.name}
+								</span>
+								<span
+									style={{
+										float: 'right',
+										color: `${transport.selected ? '#D73780' : ''}`,
+									}}
+									className="font-nunito"
+								>
+									{`$${transport.cost}`}
+								</span>
 							</div>
-						)}
-						<div id={index} className="infoButton">
-							<span
-								style={{
-									float: 'left',
-									color: `${transport.selected ? '#D73780' : ''}`,
-								}}
-								className="font-nunito"
-							>
-								{transport.name}
-							</span>
-							<span
-								style={{
-									float: 'right',
-									color: `${transport.selected ? '#D73780' : ''}`,
-								}}
-								className="font-nunito"
-							>
-								{`$${transport.cost}`}
-							</span>
 						</div>
-					</div>
-				);
-			})}
+					);
+				})}
+			</div>
 			<Link
 				className={`${selectedTransport ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}

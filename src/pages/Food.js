@@ -52,46 +52,48 @@ const Food = () => {
 					Food
 				</span>
 			</div>
-			{data.map((food, index) => {
-				return (
-					<div
-						onClick={handleSelection}
-						id={index}
-						key={food.name}
-						className={`card ${
-							food.selected ? food.photo + 'Dark' : food.photo
-						}`}
-					>
-						{food.selected && (
-							<div style={{ background: '#61AB04' }} className="circle">
-								<div className="check">
-									<img alt="check" src={checkSvg} />
+			<div style={{ marginTop: 55 }}>
+				{data.map((food, index) => {
+					return (
+						<div
+							onClick={handleSelection}
+							id={index}
+							key={food.name}
+							className={`card ${
+								food.selected ? food.photo + 'Dark' : food.photo
+							}`}
+						>
+							{food.selected && (
+								<div style={{ background: '#61AB04' }} className="circle">
+									<div className="check">
+										<img alt="check" src={checkSvg} />
+									</div>
 								</div>
+							)}
+							<div id={index} className="infoButton">
+								<span
+									style={{
+										float: 'left',
+										color: `${food.selected ? '#61AB04' : ''}`,
+									}}
+									className="font-nunito"
+								>
+									{food.name}
+								</span>
+								<span
+									style={{
+										float: 'right',
+										color: `${food.selected ? '#61AB04' : ''}`,
+									}}
+									className="font-nunito"
+								>
+									{`$${food.cost}`}
+								</span>
 							</div>
-						)}
-						<div id={index} className="infoButton">
-							<span
-								style={{
-									float: 'left',
-									color: `${food.selected ? '#61AB04' : ''}`,
-								}}
-								className="font-nunito"
-							>
-								{food.name}
-							</span>
-							<span
-								style={{
-									float: 'right',
-									color: `${food.selected ? '#61AB04' : ''}`,
-								}}
-								className="font-nunito"
-							>
-								{`$${food.cost}`}
-							</span>
 						</div>
-					</div>
-				);
-			})}
+					);
+				})}
+			</div>
 			<Link
 				className={`${selectedFood ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}

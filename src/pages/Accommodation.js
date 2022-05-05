@@ -49,46 +49,48 @@ const Accommodation = () => {
 					<b>Accommodation</b>
 				</span>
 			</div>
-			{data.map((accomm, index) => {
-				return (
-					<div
-						onClick={handleSelection}
-						id={index}
-						key={accomm.name}
-						className={`card ${
-							accomm.selected ? accomm.photo + 'Dark' : accomm.photo
-						}`}
-					>
-						{accomm.selected && (
-							<div style={{ background: '#5181fc' }} className="circle">
-								<div className="check">
-									<img alt="check" src={checkSvg} />
+			<div style={{ marginTop: 55 }}>
+				{data.map((accomm, index) => {
+					return (
+						<div
+							onClick={handleSelection}
+							id={index}
+							key={accomm.name}
+							className={`card ${
+								accomm.selected ? accomm.photo + 'Dark' : accomm.photo
+							}`}
+						>
+							{accomm.selected && (
+								<div style={{ background: '#5181fc' }} className="circle">
+									<div className="check">
+										<img alt="check" src={checkSvg} />
+									</div>
 								</div>
+							)}
+							<div id={index} className="infoButton">
+								<span
+									style={{
+										float: 'left',
+										color: `${accomm.selected ? '#5181FC' : ''}`,
+									}}
+									className="font-nunito"
+								>
+									{accomm.name}
+								</span>
+								<span
+									style={{
+										float: 'right',
+										color: `${accomm.selected ? '#5181FC' : ''}`,
+									}}
+									className="font-nunito"
+								>
+									{`$${accomm.cost}`}
+								</span>
 							</div>
-						)}
-						<div id={index} className="infoButton">
-							<span
-								style={{
-									float: 'left',
-									color: `${accomm.selected ? '#5181FC' : ''}`,
-								}}
-								className="font-nunito"
-							>
-								{accomm.name}
-							</span>
-							<span
-								style={{
-									float: 'right',
-									color: `${accomm.selected ? '#5181FC' : ''}`,
-								}}
-								className="font-nunito"
-							>
-								{`$${accomm.cost}`}
-							</span>
 						</div>
-					</div>
-				);
-			})}
+					);
+				})}
+			</div>
 			<Link
 				className={`${selectedAccommodation ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}

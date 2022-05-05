@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import Welcome from './pages/Welcome';
 import Accommodation from './pages/Accommodation';
-import Summary from './pages/Summary';
 import Transport from './pages/Transport';
 import Food from './pages/Food';
+import Summary from './pages/Summary';
 
 function App() {
 	return (
