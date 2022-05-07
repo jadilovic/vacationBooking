@@ -1,16 +1,38 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/transport.css';
 import transportSvg from '../svg/transport.svg';
 import checkSvg from '../svg/check.svg';
 import transports from '../data/transports';
 
 const Transport = () => {
+	const navigate = useNavigate();
 	const [data, setData] = useState([]);
 	const [selectedTransport, setselectedTransport] = useState(false);
+	const [edit, setEdit] = useState(false);
 	const prevIndex = useRef(-1);
 
 	useEffect(() => {
+		const prevSelected = JSON.parse(localStorage.getItem('transport'));
+		const change = localStorage.getItem('edit');
+		const completed = localStorage.getItem('completed');
+		if (completed === 'completed') {
+			navigate('/summary');
+		}
+		if (change === 'edit') {
+			setEdit(true);
+		} else {
+			setEdit(false);
+		}
+		if (prevSelected?.name) {
+			transports.forEach((item) => {
+				if (item.name === prevSelected.name) {
+					item.selected = true;
+				}
+			});
+		} else {
+			transports.forEach((item) => (item.selected = false));
+		}
 		setData(transports);
 	}, []);
 
@@ -94,7 +116,7 @@ const Transport = () => {
 			<Link
 				className={`${selectedTransport ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}
-				to="/food"
+				to={`${edit ? '/summary' : '/food'}`}
 			>
 				<div
 					className={`footer footer-transport-color${
@@ -102,8 +124,10 @@ const Transport = () => {
 					}`}
 				>
 					<p className="font-link">
-						Select transport
-						<span style={{ float: 'right', paddingRight: 40 }}>2 / 3</span>
+						{`${edit ? 'Edit transport' : 'Select transport'}`}
+						{!edit && (
+							<span style={{ float: 'right', paddingRight: 40 }}>2 / 3</span>
+						)}
 					</p>
 				</div>
 			</Link>

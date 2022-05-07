@@ -1,16 +1,38 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/food.css';
 import foodSvg from '../svg/food.svg';
 import checkSvg from '../svg/check.svg';
 import foods from '../data/foods';
 
 const Food = () => {
+	const navigate = useNavigate();
 	const [data, setData] = useState([]);
 	const [selectedFood, setSelectedFood] = useState(false);
+	const [edit, setEdit] = useState(false);
 	const prevIndex = useRef(-1);
 
 	useEffect(() => {
+		const prevSelected = JSON.parse(localStorage.getItem('food'));
+		const change = localStorage.getItem('edit');
+		const completed = localStorage.getItem('completed');
+		if (completed === 'completed') {
+			navigate('/summary');
+		}
+		if (change === 'edit') {
+			setEdit(true);
+		} else {
+			setEdit(false);
+		}
+		if (prevSelected?.name) {
+			foods.forEach((item) => {
+				if (item.name === prevSelected.name) {
+					item.selected = true;
+				}
+			});
+		} else {
+			foods.forEach((item) => (item.selected = false));
+		}
 		setData(foods);
 	}, []);
 
@@ -103,8 +125,10 @@ const Food = () => {
 					className={`footer footer-food-color${selectedFood ? '' : '-dark'}`}
 				>
 					<p className="font-link">
-						Select food{' '}
-						<span style={{ float: 'right', paddingRight: 40 }}>1 / 3</span>
+						{`${edit ? 'Edit food' : 'Select food'}`}
+						{!edit && (
+							<span style={{ float: 'right', paddingRight: 40 }}>1 / 3</span>
+						)}
 					</p>
 				</div>
 			</Link>

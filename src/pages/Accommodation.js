@@ -1,16 +1,38 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/accommodation.css';
 import accomm from '../svg/accommodations.svg';
 import checkSvg from '../svg/check.svg';
 import accommodations from '../data/accommodations';
 
 const Accommodation = () => {
+	const navigate = useNavigate();
 	const [data, setData] = useState([]);
 	const [selectedAccommodation, setSelectedAccommodation] = useState(false);
+	const [edit, setEdit] = useState(false);
 	const prevIndex = useRef(-1);
 
 	useEffect(() => {
+		const prevSelected = JSON.parse(localStorage.getItem('accommodation'));
+		const change = localStorage.getItem('edit');
+		const completed = localStorage.getItem('completed');
+		if (completed === 'completed') {
+			navigate('/summary');
+		}
+		if (change === 'edit') {
+			setEdit(true);
+		} else {
+			setEdit(false);
+		}
+		if (prevSelected?.name) {
+			accommodations.forEach((item) => {
+				if (item.name === prevSelected.name) {
+					item.selected = true;
+				}
+			});
+		} else {
+			accommodations.forEach((item) => (item.selected = false));
+		}
 		setData(accommodations);
 	}, []);
 
@@ -49,14 +71,14 @@ const Accommodation = () => {
 					<b>Accommodation</b>
 				</span>
 			</div>
-			<div style={{ marginTop: 55 }}>
+			<div className="row" style={{ marginTop: 55 }}>
 				{data.map((accomm, index) => {
 					return (
 						<div
 							onClick={handleSelection}
 							id={index}
 							key={accomm.name}
-							className={`card ${
+							className={`card col-3 col-s-9 ${
 								accomm.selected ? accomm.photo + 'Dark' : accomm.photo
 							}`}
 						>
@@ -94,7 +116,7 @@ const Accommodation = () => {
 			<Link
 				className={`${selectedAccommodation ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}
-				to="/transport"
+				to={`${edit ? '/summary' : '/transport'}`}
 			>
 				<div
 					className={`footer footer-accomm-color${
@@ -102,8 +124,10 @@ const Accommodation = () => {
 					}`}
 				>
 					<p className="font-link">
-						Select accommodation{' '}
-						<span style={{ float: 'right', paddingRight: 40 }}>1 / 3</span>
+						{`${edit ? 'Edit accommodation' : 'Select accommodation'}`}
+						{!edit && (
+							<span style={{ float: 'right', paddingRight: 40 }}>1 / 3</span>
+						)}
 					</p>
 				</div>
 			</Link>

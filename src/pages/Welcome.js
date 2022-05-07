@@ -1,8 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/welcome.css';
 
 const Welcome = () => {
+	const navigate = useNavigate();
+	useEffect(() => {
+		const completed = localStorage.getItem('completed');
+		if (completed === 'completed') {
+			navigate('/summary');
+		} else {
+			localStorage.removeItem('accommodation');
+			localStorage.removeItem('transport');
+			localStorage.removeItem('food');
+		}
+	}, []);
+
 	return (
 		<div
 			style={{

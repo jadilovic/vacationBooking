@@ -4,6 +4,7 @@ import Accommodation from './pages/Accommodation';
 import Transport from './pages/Transport';
 import Food from './pages/Food';
 import Summary from './pages/Summary';
+import '../src/styles/app.css';
 
 function App() {
 	return (

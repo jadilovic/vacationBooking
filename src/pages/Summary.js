@@ -41,21 +41,24 @@ const Summary = () => {
 		summary.push({ ...food, logo: logos[2], service: services[2] });
 		if (!accommodation?.name || !transport?.name || !food?.name) {
 			navigate('/');
+			localStorage.removeItem('completed');
+		} else {
+			localStorage.setItem('completed', 'completed');
 		}
 		setSummary([...summary]);
 		createPieChart();
 	};
 
 	useEffect(() => {
-		console.log('test');
+		localStorage.removeItem('edit');
 		createSummary();
 	}, []);
 
 	const handleClearStartOver = (e) => {
 		e.preventDefault();
-		localStorage.clear('accommodation');
-		localStorage.clear('transport');
-		localStorage.clear('food');
+		localStorage.removeItem('accommodation');
+		localStorage.removeItem('transport');
+		localStorage.removeItem('food');
 		navigate('/');
 	};
 
@@ -157,7 +160,11 @@ const Summary = () => {
 											cursor: 'pointer',
 											fontSize: '24px',
 										}}
-										onClick={() => navigate(`/${item.service}`)}
+										onClick={() => {
+											localStorage.removeItem('completed');
+											localStorage.setItem('edit', 'edit');
+											navigate(`/${item.service}`);
+										}}
 									>
 										Change?
 									</span>
