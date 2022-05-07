@@ -60,9 +60,9 @@ const Accommodation = () => {
 
 	return (
 		<div
+			className="container"
 			style={{
 				background: '#ecf0f9',
-				borderRadius: '20px',
 			}}
 		>
 			<div className="header">
@@ -78,7 +78,7 @@ const Accommodation = () => {
 							onClick={handleSelection}
 							id={index}
 							key={accomm.name}
-							className={`card col-3 col-s-9 ${
+							className={`card col-4 col-s-6 ${
 								accomm.selected ? accomm.photo + 'Dark' : accomm.photo
 							}`}
 						>

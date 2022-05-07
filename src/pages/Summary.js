@@ -65,9 +65,9 @@ const Summary = () => {
 	console.log(pieChart);
 	return (
 		<div
+			className="row container"
 			style={{
 				background: '#FED6D6',
-				borderRadius: '20px',
 				position: 'relative',
 			}}
 		>
@@ -79,7 +79,7 @@ const Summary = () => {
 					{`$${totalCost.toLocaleString('en-US')}`}
 				</span>
 			</div>
-			<div className="header-label">
+			<div className="header-label col-12 col-s-12">
 				<span
 					style={{ fontWeight: 'bold', display: 'inline', fontSize: '16px' }}
 					className="font-nunito"
@@ -93,7 +93,7 @@ const Summary = () => {
 					}`}
 				</span>
 			</div>
-			<div className="card-pie-chart" style={{ marginTop: 55 }}>
+			<div className="card-pie-chart col-6 col-s-6">
 				<div id="pie-chart-container">
 					<div
 						style={{
@@ -128,7 +128,7 @@ const Summary = () => {
 					</div>
 				</div>
 			</div>
-			<div className="selection-list">
+			<div className="selection-list col-6 col-s-6">
 				{summary.map((item, index) => {
 					return (
 						<div key={item.service}>
@@ -176,7 +176,10 @@ const Summary = () => {
 				})}
 			</div>
 			<Link style={{ textDecoration: 'none' }} to="/">
-				<div onClick={handleClearStartOver} className={`footer`}>
+				<div
+					onClick={handleClearStartOver}
+					className={`footer col-12 col-s-12`}
+				>
 					<p className="font-link">Clear Selection / Start Over</p>
 				</div>
 			</Link>

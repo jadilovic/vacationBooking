@@ -45,25 +45,29 @@
 }
 
 .card {
+	position: relative;
 	cursor: pointer;
 	border: 1px solid red;
-	height: 250px;
+	/* height: 250px; */
 	border-radius: 20px;
-	margin-top: 35px;
-	margin-left: 15px;
-	margin-right: 15px;
+	margin-bottom: 35px;
+	/* margin-left: 15px;
+	margin-right: 15px; */
 	font-size: 16px;
-	line-height: 160%;
-	font-feature-settings: 'pnum' on, 'lnum' on;
+	/* line-height: 160%;
+	font-feature-settings: 'pnum' on, 'lnum' on; */
 	color: #1f2c41;
 }
 
 .circle {
 	position: absolute;
-	margin-left: 38%;
-	margin-top: 13%;
+	/* margin-left: 38%;
+	margin-top: 13%; */
 	width: 57px;
 	height: 57px;
+	top: 35%;
+	left: 50%;
+	margin: -25px 0 0 -25px; /* Apply negative top and left margins to truly center the element */
 	/* background: #5181fc; */
 	border-radius: 100px;
 }
@@ -79,7 +83,7 @@
 }
 
 .infoButton {
-	height: 80px;
+	height: 75px;
 	margin-top: 170px;
 	font-size: 16px;
 	background: #ffffff;

@@ -17,9 +17,9 @@ const Welcome = () => {
 
 	return (
 		<div
+			className="container"
 			style={{
 				background: '#FFFFFF',
-				borderRadius: '20px',
 			}}
 		>
 			<div className="header">
@@ -44,7 +44,7 @@ const Welcome = () => {
 				</span>
 			</div>
 			<Link style={{ textDecoration: 'none' }} to="/accommodation">
-				<div className="footer">
+				<div className="footer  col-12 col-s-12">
 					<p className="font-link">Start Quiz</p>
 				</div>
 			</Link>

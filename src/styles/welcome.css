@@ -21,7 +21,7 @@ b {
 
 .description {
 	border: 1px solid red;
-	margin-top: 50px;
+	margin-top: 70px;
 	margin-left: 50px;
 	margin-right: 50px;
 	font-size: 16px;
@@ -40,9 +40,9 @@ b {
 	height: 72px;
 	padding: 9px;
 	font-size: 16px;
-	margin-top: 66.92px;
-	margin-left: 15px;
-	margin-right: 15px;
+	margin-top: 60px;
+	/* margin-left: 15px;
+	margin-right: 15px; */
 	background: #111111;
 	border-radius: 20px 20px 0px 0px;
 	text-align: center;

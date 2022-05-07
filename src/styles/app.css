@@ -2,6 +2,12 @@
 	box-sizing: border-box;
 }
 
+.container {
+	border-radius: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 .row::after {
 	content: '';
 	clear: both;
@@ -10,7 +16,7 @@
 
 [class*='col-'] {
 	float: left;
-	padding: 15px;
+	/* padding: 15px; */
 }
 
 /* For mobile phones: */
@@ -18,8 +24,11 @@
 	width: 100%;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
 	/* For tablets: */
+	.selection-list {
+		margin-top: 70px;
+	}
 	.col-s-1 {
 		width: 8.33%;
 	}
@@ -57,7 +66,7 @@
 		width: 100%;
 	}
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 900px) {
 	/* For desktop: */
 	.col-1 {
 		width: 8.33%;

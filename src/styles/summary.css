@@ -24,6 +24,7 @@
 	color: #000000;
 	background: #ffffff;
 	border-radius: 10px;
+	max-width: max-content;
 }
 
 .card-pie-chart {
@@ -31,9 +32,9 @@
 	border: 1px solid red;
 	height: 160px;
 	border-radius: 20px;
-	margin-top: 35px;
-	margin-left: 15px;
-	margin-right: 15px;
+	margin-top: 70px;
+	/* margin-left: 15px;
+	margin-right: 15px; */
 	font-size: 16px;
 	line-height: 160%;
 	font-feature-settings: 'pnum' on, 'lnum' on;
@@ -98,8 +99,8 @@
 	height: 350px;
 	border-radius: 20px;
 	margin-top: 35px;
-	margin-left: 15px;
-	margin-right: 15px;
+	/* margin-left: 15px;
+	margin-right: 15px; */
 	font-size: 16px;
 	line-height: 160%;
 	font-feature-settings: 'pnum' on, 'lnum' on;

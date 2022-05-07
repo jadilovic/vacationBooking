@@ -60,9 +60,9 @@ const Food = () => {
 
 	return (
 		<div
+			className="container"
 			style={{
 				background: '#E1ECD3',
-				borderRadius: '20px',
 			}}
 		>
 			<div className="header">
@@ -74,14 +74,14 @@ const Food = () => {
 					Food
 				</span>
 			</div>
-			<div style={{ marginTop: 55 }}>
+			<div className="row" style={{ marginTop: 55 }}>
 				{data.map((food, index) => {
 					return (
 						<div
 							onClick={handleSelection}
 							id={index}
 							key={food.name}
-							className={`card ${
+							className={`card col-4 col-s-6 ${
 								food.selected ? food.photo + 'Dark' : food.photo
 							}`}
 						>

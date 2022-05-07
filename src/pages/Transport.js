@@ -60,9 +60,9 @@ const Transport = () => {
 
 	return (
 		<div
+			className="container"
 			style={{
 				background: '#F9ECF2',
-				borderRadius: '20px',
 			}}
 		>
 			<div className="header">
@@ -71,14 +71,14 @@ const Transport = () => {
 					Transport
 				</span>
 			</div>
-			<div style={{ marginTop: 55 }}>
+			<div className="row" style={{ marginTop: 55 }}>
 				{data.map((transport, index) => {
 					return (
 						<div
 							onClick={handleSelection}
 							id={index}
 							key={transport.name}
-							className={`card ${
+							className={`card col-4 col-s-6 ${
 								transport.selected ? transport.photo + 'Dark' : transport.photo
 							}`}
 						>
