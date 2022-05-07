@@ -71,7 +71,7 @@ const Accommodation = () => {
 					<b>Accommodation</b>
 				</span>
 			</div>
-			<div className="row" style={{ marginTop: 55 }}>
+			<div className="row" style={{ marginTop: 70 }}>
 				{data.map((accomm, index) => {
 					return (
 						<div

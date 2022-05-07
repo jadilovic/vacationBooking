@@ -71,7 +71,7 @@ const Transport = () => {
 					Transport
 				</span>
 			</div>
-			<div className="row" style={{ marginTop: 55 }}>
+			<div className="row" style={{ marginTop: 70 }}>
 				{data.map((transport, index) => {
 					return (
 						<div
