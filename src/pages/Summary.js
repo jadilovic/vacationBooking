@@ -62,7 +62,6 @@ const Summary = () => {
 		navigate('/');
 	};
 
-	console.log(pieChart);
 	return (
 		<div
 			className="row container"

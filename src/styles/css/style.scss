@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+@import 'circle';
+
+.card {
+	border-radius: $radius;
+}
+
+.infoButton {
+	border-radius: $radius;
+}
+
+.header {
+	@include header();
+}

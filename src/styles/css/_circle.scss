@@ -1,0 +1,18 @@
+.circle {
+	position: absolute;
+	width: 57px;
+	height: 57px;
+	top: 35%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	border-radius: 100px;
+
+	.check {
+		position: absolute;
+		left: 20.83%;
+		right: 20.83%;
+		top: 20.17%;
+		bottom: 29.17%;
+		color: #ffffff;
+	}
+}

@@ -5,6 +5,7 @@ import Transport from './pages/Transport';
 import Food from './pages/Food';
 import Summary from './pages/Summary';
 import '../src/styles/app.css';
+import './styles/css/style.css';
 
 function App() {
 	return (
