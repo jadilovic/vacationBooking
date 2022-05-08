@@ -4,6 +4,7 @@ import '../styles/accommodation.css';
 import accomm from '../svg/accommodations.svg';
 import checkSvg from '../svg/check.svg';
 import accommodations from '../data/accommodations';
+import Card from '../components/Card';
 
 const Accommodation = () => {
 	const navigate = useNavigate();
@@ -71,7 +72,13 @@ const Accommodation = () => {
 					<b>Accommodation</b>
 				</span>
 			</div>
-			<div className="row" style={{ marginTop: 70 }}>
+			<Card
+				data={data}
+				handleSelection={handleSelection}
+				selectionColor="#5181FC"
+				checkSvg={checkSvg}
+			/>
+			{/* <div className="row" style={{ marginTop: 70 }}>
 				{data.map((accomm, index) => {
 					return (
 						<div
@@ -83,7 +90,7 @@ const Accommodation = () => {
 							}`}
 						>
 							{accomm.selected && (
-								<div style={{ background: '#5181fc' }} className="circle">
+								<div style={{ background: '#5181FC' }} className="circle">
 									<div className="check">
 										<img alt="check" src={checkSvg} />
 									</div>
@@ -112,7 +119,7 @@ const Accommodation = () => {
 						</div>
 					);
 				})}
-			</div>
+			</div> */}
 			<Link
 				className={`${selectedAccommodation ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}
