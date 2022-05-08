@@ -52,7 +52,7 @@ const Summary = () => {
 	useEffect(() => {
 		localStorage.removeItem('edit');
 		createSummary();
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	const handleClearStartOver = (e) => {
 		e.preventDefault();

@@ -1,9 +1,4 @@
-* {
-	box-sizing: border-box;
-}
-
 .svgTransport {
-	border: 1px solid red;
 	position: relative;
 	width: 27px;
 }

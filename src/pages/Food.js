@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/food.css';
 import foodSvg from '../svg/food.svg';
-import checkSvg from '../svg/check.svg';
+import Card from '../components/Card';
 import foods from '../data/foods';
 
 const Food = () => {
@@ -10,7 +10,6 @@ const Food = () => {
 	const [data, setData] = useState([]);
 	const [selectedFood, setSelectedFood] = useState(false);
 	const [edit, setEdit] = useState(false);
-	const prevIndex = useRef(-1);
 
 	useEffect(() => {
 		const prevSelected = JSON.parse(localStorage.getItem('food'));
@@ -34,29 +33,12 @@ const Food = () => {
 			foods.forEach((item) => (item.selected = false));
 		}
 		setData(foods);
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	useEffect(() => {
 		const selected = data.some((item) => item.selected === true);
 		setSelectedFood(selected);
 	}, [data]);
-
-	const handleSelection = (e) => {
-		e.preventDefault();
-		const index = e.target.id;
-		if (index === prevIndex.current) {
-			data.forEach((item) => (item.selected = false));
-			localStorage.removeItem('food');
-			prevIndex.current = -1;
-			setData([...data]);
-		} else {
-			prevIndex.current = index;
-			data.forEach((item) => (item.selected = false));
-			data[index] = { ...data[index], selected: true };
-			localStorage.setItem('food', JSON.stringify(data[index]));
-			setData([...data]);
-		}
-	};
 
 	return (
 		<div
@@ -74,48 +56,12 @@ const Food = () => {
 					Food
 				</span>
 			</div>
-			<div className="row" style={{ marginTop: 70 }}>
-				{data.map((food, index) => {
-					return (
-						<div
-							onClick={handleSelection}
-							id={index}
-							key={food.name}
-							className={`card col-4 col-s-6 ${
-								food.selected ? food.photo + 'Dark' : food.photo
-							}`}
-						>
-							{food.selected && (
-								<div style={{ background: '#61AB04' }} className="circle">
-									<div className="check">
-										<img alt="check" src={checkSvg} />
-									</div>
-								</div>
-							)}
-							<div id={index} className="infoButton">
-								<span
-									style={{
-										float: 'left',
-										color: `${food.selected ? '#61AB04' : ''}`,
-									}}
-									className="font-nunito"
-								>
-									{food.name}
-								</span>
-								<span
-									style={{
-										float: 'right',
-										color: `${food.selected ? '#61AB04' : ''}`,
-									}}
-									className="font-nunito"
-								>
-									{`$${food.cost}`}
-								</span>
-							</div>
-						</div>
-					);
-				})}
-			</div>
+			<Card
+				data={data}
+				setData={setData}
+				selection="food"
+				selectionColor="#61AB04"
+			/>
 			<Link
 				className={`${selectedFood ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}

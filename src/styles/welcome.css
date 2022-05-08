@@ -1,7 +1,3 @@
-* {
-	box-sizing: border-box;
-}
-
 .font-link {
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -12,7 +8,6 @@ b {
 
 .header {
 	text-align: center;
-	border: 1px solid red;
 	padding-top: 113px;
 	font-size: 26px;
 	line-height: 120%;
@@ -20,7 +15,6 @@ b {
 }
 
 .description {
-	border: 1px solid red;
 	margin-top: 70px;
 	margin-left: 35px;
 	margin-right: 35px;
@@ -41,11 +35,8 @@ b {
 	padding: 9px;
 	font-size: 16px;
 	margin-top: 60px;
-	/* margin-left: 15px;
-	margin-right: 15px; */
 	background: #111111;
 	border-radius: 20px 20px 0px 0px;
 	text-align: center;
 	color: white;
-	/* border: 1px solid red; */
 }

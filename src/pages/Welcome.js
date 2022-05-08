@@ -13,7 +13,7 @@ const Welcome = () => {
 			localStorage.removeItem('transport');
 			localStorage.removeItem('food');
 		}
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 	return (
 		<div
