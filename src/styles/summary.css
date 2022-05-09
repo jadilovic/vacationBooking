@@ -48,17 +48,17 @@
 	padding: 5px;
 }
 
-.entry {
+.info {
 	display: flex;
 	align-items: center;
 }
 
-.entry-color {
+.box-color {
 	height: 15px;
 	width: 15px;
 }
 
-.entry-text {
+.info-text {
 	margin-left: 11px;
 	font-family: 'Ubuntu';
 	font-style: normal;

@@ -106,21 +106,21 @@ const Summary = () => {
 					></div>
 
 					<div id="legenda">
-						<div className="entry">
-							<div id="color-accommodation" className="entry-color"></div>
-							<div className="entry-text">{`${Math.floor(
+						<div className="info">
+							<div id="color-accommodation" className="box-color"></div>
+							<div className="info-text">{`${Math.floor(
 								pieChart[0]?.percentage * 100
 							)}% accommodation`}</div>
 						</div>
-						<div className="entry">
-							<div id="color-transport" className="entry-color"></div>
-							<div className="entry-text">{`${Math.floor(
+						<div className="info">
+							<div id="color-transport" className="box-color"></div>
+							<div className="info-text">{`${Math.floor(
 								pieChart[1]?.percentage * 100
 							)}% transport`}</div>
 						</div>
-						<div className="entry">
-							<div id="color-food" className="entry-color"></div>
-							<div className="entry-text">{`${Math.floor(
+						<div className="info">
+							<div id="color-food" className="box-color"></div>
+							<div className="info-text">{`${Math.floor(
 								pieChart[2]?.percentage * 100
 							)}% food`}</div>
 						</div>
