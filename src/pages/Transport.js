@@ -62,7 +62,7 @@ const Transport = () => {
 			<Link
 				className={`${selectedTransport ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}
-				to={`${edit ? '/summary' : '/food'}`}
+				to={`${!selectedTransport ? '' : edit ? '/summary' : '/food'}`}
 			>
 				<div
 					className={`footer footer-transport-color${

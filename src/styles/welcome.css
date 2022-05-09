@@ -22,11 +22,13 @@ b {
 
 .footer {
 	position: sticky;
+	margin-top: 60px;
 	bottom: 0px;
 	height: 72px;
 	padding: 9px;
 	font-size: 16px;
-	margin-top: 60px;
+	font-style: normal;
+	font-weight: 400;
 	background: #111111;
 	border-radius: 20px 20px 0px 0px;
 	text-align: center;

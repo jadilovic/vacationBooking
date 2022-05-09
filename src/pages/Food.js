@@ -65,7 +65,7 @@ const Food = () => {
 			<Link
 				className={`${selectedFood ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}
-				to="/summary"
+				to={`${selectedFood ? '/summary' : ''}`}
 			>
 				<div
 					className={`footer footer-food-color${selectedFood ? '' : '-dark'}`}

@@ -62,7 +62,7 @@ const Accommodation = () => {
 			<Link
 				className={`${selectedAccommodation ? '' : 'disabled-link'}`}
 				style={{ textDecoration: 'none' }}
-				to={`${edit ? '/summary' : '/transport'}`}
+				to={`${!selectedAccommodation ? '' : edit ? '/summary' : '/transport'}`}
 			>
 				<div
 					className={`footer footer-accomm-color${
