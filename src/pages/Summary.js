@@ -80,7 +80,11 @@ const Summary = () => {
 			</div>
 			<div className="header-label col-12 col-s-12">
 				<span
-					style={{ fontWeight: 'bold', display: 'inline', fontSize: '16px' }}
+					style={{
+						fontWeight: 'bold',
+						display: 'inline',
+						fontSize: '16px',
+					}}
 					className="font-nunito"
 				>
 					{`${
