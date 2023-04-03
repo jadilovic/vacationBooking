@@ -68,6 +68,7 @@ const Summary = () => {
 			style={{
 				background: '#FED6D6',
 				position: 'relative',
+				height: '100vh',
 			}}
 		>
 			<div className="header-summary">
@@ -178,7 +179,17 @@ const Summary = () => {
 					);
 				})}
 			</div>
-			<Link style={{ textDecoration: 'none' }} to="/">
+			<Link
+				style={{
+					textDecoration: 'none',
+					position: 'absolute',
+					bottom: 0,
+					left: 0,
+					margin: '0 15px',
+					width: 'calc(100% - 30px)',
+				}}
+				to="/"
+			>
 				<div
 					onClick={handleClearStartOver}
 					className={`footer col-12 col-s-12`}

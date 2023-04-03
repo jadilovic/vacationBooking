@@ -43,7 +43,15 @@ const Welcome = () => {
 					</p>
 				</span>
 			</div>
-			<Link style={{ textDecoration: 'none' }} to="/accommodation">
+			<Link
+				style={{
+					textDecoration: 'none',
+					position: 'absolute',
+					bottom: 0,
+					width: 'calc(100% - 30px)',
+				}}
+				to="/accommodation"
+			>
 				<div className="footer  col-12 col-s-12">
 					<p className="font-link">Start Quiz</p>
 				</div>
